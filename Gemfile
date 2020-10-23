@@ -5,7 +5,7 @@ ruby '2.6.6'
 
 
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
-gem 'sqlite3', '~> 1.4'
+
 gem 'puma', '~> 4.1'
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 4.0'
@@ -27,6 +27,13 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
+  #gem 'sqlite3', '~> 1.4'
+end
+
+group :production do
+	gem 'pg', '~> 1.2', '>= 1.2.3'
+	gem 'rails_12factor', '0.0.2'
+
 end
 
 group :test do
